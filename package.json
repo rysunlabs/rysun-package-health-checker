@@ -1,5 +1,5 @@
 {
-  "name": "package-health-checker",
+  "name": "@rysun/package-health-checker",
   "version": "1.0.0",
   "description": "Check your package's health using this module",
   "main": "./lib/cjs/index.js",
