@@ -1,8 +1,8 @@
-export const createHTMLTemplate = (data) => {
+export const createHTMLTemplate = (data: any) => {
 
     let template = ""
 
-    const createTRtags = (responseData) => {
+    const createTRtags = (responseData: any) => {
         let templateForTR = ""
         for(let i in responseData){			
 			if(responseData[i].isThreeMonthAgo){

@@ -26,7 +26,7 @@ const loadingInterval = setInterval(() => {
     count++;
 }, 100);
 
-const getIssuesCount = async (owner, pack_name) => {
+const getIssuesCount = async (owner: string, pack_name: string) => {
     return new Promise((resolve, reject) => {
         axios.get(`https://api.github.com/search/issues?q=repo:${owner}/${pack_name}+type:issue+state:closed`)
             .then(response => {
@@ -62,7 +62,7 @@ const getIssuesCount = async (owner, pack_name) => {
 }
 
 
-const checkLastModifiedDate = (modifiedDate) => {
+const checkLastModifiedDate = (modifiedDate: any) => {
     const currDate: any = new Date()
     const date: any = new Date(modifiedDate)
     const diffTime = Math.abs(currDate - date);
@@ -83,7 +83,7 @@ const checkLastModifiedDate = (modifiedDate) => {
     return [msg, isThreeMonthAgo]
 }
 
-const getDetails = async (data, name, version) => {
+const getDetails = async (data: any, name: string, version: string) => {
     let packageData = {}
     for (let i of data) {
         if (i.package.name && name && i.package.name === name) {

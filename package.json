@@ -1,22 +1,47 @@
 {
   "name": "package-health-checker",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Check your package's health using this module",
-  "main": "index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "bin": {
-    "check-health": "./dist/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kcsplcompusoft/package-health-checker.git"
+    "check-health": "./lib/cjs/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "version-select": "version-select",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "build:watch": "tsc -w"
   },
-  "keywords": [],
-  "author": "Jayrajsinh Zala",
+  "keywords": [
+    "package-health-checker",
+    "nodejs-health-checker",
+    "package-report",
+    "Github-issues",
+    "Version-list",
+    "Scores",
+    "healthCheck",
+    "health-check",
+    "health-checker",
+    "healthChecker"
+  ],
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rysuncommunity/package-health-checker"
+  },
+  "bugs": {
+    "url": "https://github.com/rysuncommunity/package-health-checker/issues"
+  },
+  "homepage": "https://github.com/rysuncommunity/package-health-checker#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "coderyser",
   "license": "ISC",
   "devDependencies": {
+    "@types/git-url-parse": "^9.0.1",
     "@types/node": "^20.3.1"
   },
   "dependencies": {
