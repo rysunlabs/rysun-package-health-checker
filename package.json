@@ -1,0 +1,27 @@
+{
+  "name": "package-health-checker",
+  "version": "1.0.4",
+  "description": "Check your package's health using this module",
+  "main": "index.js",
+  "bin": {
+    "check-health": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kcsplcompusoft/package-health-checker.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jayrajsinh Zala",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.3.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "commander": "^11.0.0",
+    "git-url-parse": "^13.1.0"
+  }
+}
