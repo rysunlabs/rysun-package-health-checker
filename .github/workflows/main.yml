@@ -1,0 +1,28 @@
+name: "publish package health checker npm"
+
+on: 
+  push:
+    branches:
+              Prod
+jobs: 
+  release:         
+        runs-on: ubuntu-latest  
+        permissions:
+          packages: write
+          contents: read       
+        steps:
+            - name: checkout
+              uses: actions/checkout@v3
+            - name: node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '14.x'
+                  registry-url: 'https://registry.npmjs.org'                 
+            - run:  | 
+                npm install              
+                tsc -p tsconfig.json
+                tsc -p tsconfig-cjs.json  
+            - run:          
+                npm publish --access public                    
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN_UPDATED}}    
