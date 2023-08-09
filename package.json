@@ -38,7 +38,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "coderyser",
+  "author": "rysun",
   "license": "ISC",
   "devDependencies": {
     "@types/git-url-parse": "^9.0.1",
