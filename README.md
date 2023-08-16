@@ -1,17 +1,19 @@
 # @rysun/package-health-checker
 
-This package provides the information about packages like open github issues, weekly download, latest version, downloaded version, score details and much more so using that information user can check the Health of the package that they used in there projects.
+This module accelerates development and helps you build the most reliable code. Package-health-checker checks the latest version of the code and generates a report with specific details including no. of downloads, open issues in GitHub, pull requests, published date, and others.  
+
+The module also provides a percentage range to assist developers in quickly picking the best code for their projects.  
 
 ## Installation & Usage
 
-To install this package enter this command on your terminal:
+To install this package, enter this command on your terminal: 
 ```bash
 npm install @rysun/package-health-checker
 or
 yarn add @rysun/package-health-checker
 ```
 
-To use the functionality of this node module in your project you need to run the following command in terminal:
+To use the functionality of this node module in your project, run the following command in the terminal:
 ```bash
 npx check-health
 ```
@@ -23,7 +25,7 @@ or
 yarn global add @rysun/package-health-checker
 ```
 
-To use the functionality of this node module Globally in your project you need to run the following command in terminal:
+To use the functionality of this node module globally in your project, run the following command in the terminal:
 ```bash
 check-health
 ```
