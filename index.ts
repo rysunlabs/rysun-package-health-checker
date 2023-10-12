@@ -128,6 +128,8 @@ const upgrade = async (packageJson: PackageJson) => {
             }
         }
     }
+    console.log("dependencies", DependencyList);
+    
     const htmlData = createHTMLTemplate(packageData)
 
     fs.writeFileSync(`./report.html`, htmlData)
