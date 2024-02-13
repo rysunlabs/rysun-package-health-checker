@@ -1,6 +1,6 @@
 {
   "name": "@rysun/package-health-checker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check the latest version of code and generate report with GitHub issues, PRs, published date, etc.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
