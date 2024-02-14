@@ -1,6 +1,6 @@
 {
   "name": "@rysun/package-health-checker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check the latest version of code and generate report with GitHub issues, PRs, published date, etc.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -41,13 +41,13 @@
   "author": "rysun",
   "license": "ISC",
   "devDependencies": {
-    "@types/git-url-parse": "^9.0.1",
-    "@types/node": "^20.8.4"
+    "@types/git-url-parse": "^9.0.3",
+    "@types/node": "^20.11.17"
   },
   "dependencies": {
-    "axios": "^1.5.1",
-    "commander": "^11.0.0",
-    "git-url-parse": "^13.1.0",
+    "axios": "^1.6.7",
+    "commander": "^12.0.0",
+    "git-url-parse": "^14.0.0",
     "version-select": "^1.0.13"
   }
 }
