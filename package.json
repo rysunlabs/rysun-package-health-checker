@@ -29,12 +29,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rysuncommunity/package-health-checker"
+    "url": "https://github.com/rysuncommunity/rysun-package-health-checker"
   },
   "bugs": {
-    "url": "https://github.com/rysuncommunity/package-health-checker/issues"
+    "url": "https://github.com/rysuncommunity/rysun-package-health-checker/issues"
   },
-  "homepage": "https://github.com/rysuncommunity/package-health-checker#readme",
+  "homepage": "https://github.com/rysuncommunity/rysun-package-health-checker#readme",
   "publishConfig": {
     "access": "public"
   },
