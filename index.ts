@@ -122,14 +122,15 @@ const upgrade = async (packageJson: PackageJson) => {
         const entries = packages ? Object.entries(packages) : [];
 
         for (const [name, version] of entries) {
-            const data = await axios.get(`https://registry.npmjs.org/-/v1/search?text=${name}`)
-            if (data) {
-                packageData[name] = await getDetails(data.data.objects, name, version)
+            const response = await fetch(`https://registry.npmjs.org/-/v1/search?text=${name}`)
+            if (response.ok) {
+                const data:any = await response.json();
+                packageData[name] = await getDetails(data.objects, name, version)
             }
         }
     }
     console.log("dependencies", DependencyList);
-    
+
     const htmlData = createHTMLTemplate(packageData)
 
     fs.writeFileSync(`./report.html`, htmlData)
