@@ -28,10 +28,9 @@ const loadingInterval = setInterval(() => {
 
 const getIssuesCount = async (owner: string, pack_name: string) => {
     return new Promise((resolve, reject) => {
-        axios.get(`https://api.github.com/search/issues?q=repo:${owner}/${pack_name}+type:issue+state:closed`)
-            .then(response => {
-                resolve(response.data);
-            })
+        fetch(`https://api.github.com/search/issues?q=repo:${owner}/${pack_name}+type:issue+state:closed`)
+            .then(response => response.json())
+            .then(data => resolve(data))
             .catch(error => {
                 if (error.response.status === 403 && error.response.data.message.includes("API rate limit exceeded")) {
                     const resetTime = new Date(error.response.headers['x-ratelimit-reset'] * 1000);
