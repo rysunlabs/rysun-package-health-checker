@@ -2,10 +2,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "lib": [
-      "es2022"  // Updated to latest ES2022 for new JavaScript features
+      "es2022" 
     ],
-    "target": "ES2022",  // Latest ES version with full async/await support
-    "module": "ESNext",  // Latest ES module system
+    "target": "ES2022",
+    "module": "ESNext",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
